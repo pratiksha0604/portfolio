@@ -1,0 +1,23 @@
+// Mobile navigation toggle
+const btn = document.querySelector('.hamburger');
+const nav = document.getElementById('nav');
+btn.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+});
+nav.addEventListener('click', () => { nav.classList.remove('open'); btn.setAttribute('aria-expanded', false); });
+
+// Contact form validation
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let ok = true;
+  form.querySelectorAll('input, textarea').forEach((f) => {
+    const err = f.nextElementSibling;
+    if (!f.checkValidity()) { ok = false; f.classList.add('invalid'); err.textContent = f.validationMessage; }
+    else { f.classList.remove('invalid'); err.textContent = ''; }
+  });
+  const status = document.getElementById('form-status');
+  if (ok) { console.log('Form data:', Object.fromEntries(new FormData(form))); status.textContent = 'Thanks! Your message was validated.'; form.reset(); }
+  else { status.textContent = ''; }
+});

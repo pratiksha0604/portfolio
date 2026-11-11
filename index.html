@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pratiksha Bhende | Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Pratiksha Bhende, a web developer building responsive, accessible and high-performance websites.">
+  <meta property="og:title" content="Pratiksha Bhende | Web Developer Portfolio">
+  <meta property="og:description" content="Responsive, accessible and high-performance web projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/profile.svg">
+  <link rel="icon" href="images/profile.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Pratiksha Bhende","url":"https://pratiksha0604-portfolio.netlify.app","sameAs":["https://github.com/pratiksha0604"],"jobTitle":"Web Developer"}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="logo" href="#home">Pratiksha<span>.</span></a>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav" class="nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <img src="images/profile.svg" width="140" height="140" alt="Illustrated avatar of Pratiksha Bhende">
+      <h1>Hi, I'm Pratiksha Bhende</h1>
+      <p>I build fast, responsive and accessible websites.</p>
+      <a class="btn" href="#projects">View my work</a>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>I am a web development student who enjoys HTML, CSS, JavaScript and modern tooling such as Git, npm and Netlify. This site is optimized (minified assets, lazy loading) and deployed on Netlify.</p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card"><h3>React To-Do List</h3><p>A task manager built with React.</p></article>
+        <article class="card"><h3>Simple REST API</h3><p>Node.js and Express CRUD API.</p></article>
+        <article class="card"><h3>Weather Widget</h3><p>Live weather using Fetch and OpenWeatherMap.</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required minlength="2">
+        <span class="error" aria-live="polite"></span>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+        <span class="error" aria-live="polite"></span>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+        <span class="error" aria-live="polite"></span>
+        <button class="btn" type="submit">Send</button>
+        <p id="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Pratiksha Bhende &middot; <a href="https://github.com/pratiksha0604">GitHub</a></p>
+  </footer>
+  <script src="js/main.min.js" defer></script>
+</body>
+</html>
